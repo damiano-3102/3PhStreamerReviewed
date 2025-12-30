@@ -1,0 +1,16 @@
+# Compiled class files
+bin/
+
+# Dependencies
+lib/
+
+# Log files
+log/
+*.log
+
+# IDE settings
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db

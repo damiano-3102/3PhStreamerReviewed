@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<config>
+	<task name="logAlive" class="it.abaco.sc.plugins.LogAlive" status="on">
+		<timer type="Cicle">
+			<startTime>00:00</startTime>
+			<endTime>23:59</endTime>
+			<unit>seconds</unit>
+			<value>30</value>
+		</timer>
+	</task>
+</config>

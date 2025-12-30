@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+ 
+  	<appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+    	<layout class="org.apache.log4j.PatternLayout">
+      		<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+    	</layout>
+  	</appender> 
+
+	<appender name="logFileAppender" class="org.apache.log4j.RollingFileAppender">
+    	<param name="File" value="log/3streamer.log"/>
+		<param name="MaxFileSize" value="10000KB"/>
+		<param name="MaxBackupIndex" value="30"/>
+    	<layout class="org.apache.log4j.PatternLayout">
+      		<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+    	</layout>
+  	</appender>
+  
+  	<logger name="it.trentuno.zerodue.anag">
+  		<level value="debug"/> 
+   		<appender-ref ref="consoleAppender"/>  
+  	</logger> 	
+
+	<appender name="3oracleImporterFileAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="log/3oracleImporter.log"/>
+		<param name="MaxFileSize" value="10000KB"/>
+		<param name="MaxBackupIndex" value="30"/>
+	   	<layout class="org.apache.log4j.PatternLayout">
+	     	<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+	   	</layout>
+	</appender>
+	
+	<logger name="it.trentuno.zerodue.anag.tasks.OracleImporter">
+	 	<level value="debug"/> 
+	 	<appender-ref ref="3oracleImporterFileAppender" />
+ 	</logger> 
+ 	 
+ 	
+ 	<appender name="3broadcastGeneratorFileAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="log/3broadcastGenerator.log"/>
+		<param name="MaxFileSize" value="10000KB"/>
+		<param name="MaxBackupIndex" value="30"/>
+	   	<layout class="org.apache.log4j.PatternLayout">
+	     	<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+	   	</layout>
+	</appender>
+	
+	<logger name="it.trentuno.zerodue.anag.tasks.BroadcastGenerator">
+	 	<level value="debug"/> 
+	 	<appender-ref ref="3broadcastGeneratorFileAppender" />
+ 	</logger>  
+ 	
+ 	
+ 	<appender name="3broadcastSenderFileAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="log/3broadcastSender.log"/>
+		<param name="MaxFileSize" value="10000KB"/>
+		<param name="MaxBackupIndex" value="30"/>
+	   	<layout class="org.apache.log4j.PatternLayout">
+	     	<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+	   	</layout>
+	</appender>
+	
+	<logger name="it.trentuno.zerodue.anag.tasks.BroadcastSender">
+	 	<level value="debug"/> 
+	 	<appender-ref ref="3broadcastSenderFileAppender" />
+ 	</logger>  
+ 
+  
+	<appender name="3robotMergeCalculateFileAppender" class="org.apache.log4j.RollingFileAppender">
+	   	<param name="File" value="log/3robotMergeCalculate.log"/>
+		<param name="MaxFileSize" value="10000KB"/>
+		<param name="MaxBackupIndex" value="30"/>
+	   	<layout class="org.apache.log4j.PatternLayout">
+	     	<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+	   	</layout>
+	</appender>
+  
+   	<logger name="it.trentuno.zerodue.anag.tasks.RobotMergeCalculate">
+	 	<level value="debug"/> 
+	 	<appender-ref ref="3robotMergeCalculateFileAppender" />
+ 	</logger> 
+ 	 
+ 	
+ 	<appender name="3robotMergeSenderFileAppender" class="org.apache.log4j.RollingFileAppender">
+	   	<param name="File" value="log/3robotMergeSender.log"/>
+		<param name="MaxFileSize" value="10000KB"/>
+		<param name="MaxBackupIndex" value="30"/>
+	   	<layout class="org.apache.log4j.PatternLayout">
+	     	<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+	   	</layout>
+	</appender>
+  
+   	<logger name="it.trentuno.zerodue.anag.tasks.RobotMergeSender">
+	 	<level value="debug"/> 
+	 	<appender-ref ref="3robotMergeSenderFileAppender" />
+ 	</logger>  
+ 	
+ 	
+ 	<appender name="3anagWsImporterFileAppender" class="org.apache.log4j.RollingFileAppender">
+	   	<param name="File" value="log/3anagWsImporter.log"/>
+		<param name="MaxFileSize" value="10000KB"/>
+		<param name="MaxBackupIndex" value="30"/>
+	   	<layout class="org.apache.log4j.PatternLayout">
+	     	<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+	   	</layout>
+	</appender>
+  
+   	<logger name="it.trentuno.zerodue.anag.tasks.AnagWsImporter">
+	 	<level value="debug"/> 
+	 	<appender-ref ref="3anagWsImporterFileAppender" />
+ 	</logger>  
+ 	
+ 	
+ 	<appender name="3anagWsSenderFileAppender" class="org.apache.log4j.RollingFileAppender">
+	   	<param name="File" value="log/3anagWsSender.log"/>
+		<param name="MaxFileSize" value="10000KB"/>
+		<param name="MaxBackupIndex" value="30"/>
+	   	<layout class="org.apache.log4j.PatternLayout">
+	     	<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+	   	</layout>
+	</appender>
+  
+   	<logger name="it.trentuno.zerodue.anag.tasks.AnagWsSender">
+	 	<level value="debug"/> 
+	 	<appender-ref ref="3anagWsSenderFileAppender" />
+ 	</logger>
+ 	
+ 	
+ 	<appender name="3statsCalculatorFileAppender" class="org.apache.log4j.RollingFileAppender">
+	   	<param name="File" value="log/3statsCalculator.log"/>
+		<param name="MaxFileSize" value="10000KB"/>
+		<param name="MaxBackupIndex" value="30"/>
+	   	<layout class="org.apache.log4j.PatternLayout">
+	     	<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+	   	</layout>
+	</appender>
+  
+   	<logger name="it.trentuno.zerodue.anag.tasks.StatsCalculator">
+	 	<level value="debug"/> 
+	 	<appender-ref ref="3statsCalculatorFileAppender" />
+ 	</logger>
+ 	
+ 	
+ 	<appender name="3resubmitNotSendedMessageFileAppender" class="org.apache.log4j.RollingFileAppender">
+	   	<param name="File" value="log/3resubmitNotSendedMessage.log"/>
+		<param name="MaxFileSize" value="10000KB"/>
+		<param name="MaxBackupIndex" value="30"/>
+	   	<layout class="org.apache.log4j.PatternLayout">
+	     	<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+	   	</layout>
+	</appender>
+  
+   	<logger name="it.trentuno.zerodue.anag.tasks.ResubmitNotSendedMessage">
+	 	<level value="debug"/> 
+	 	<appender-ref ref="3resubmitNotSendedMessageFileAppender" />
+ 	</logger>
+ 	
+ 	<appender name="3singleUserBroadcastSenderFileAppender" class="org.apache.log4j.RollingFileAppender">
+	   	<param name="File" value="log/3singleUserBroadcastSenderMessage.log"/>
+		<param name="MaxFileSize" value="10000KB"/>
+		<param name="MaxBackupIndex" value="30"/>
+	   	<layout class="org.apache.log4j.PatternLayout">
+	     	<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+	   	</layout>
+	</appender>	
+	<logger name="it.trentuno.zerodue.anag.tasks.BroadcastSenderSingleUser">
+	 	<level value="debug"/> 
+	 	<appender-ref ref="3singleUserBroadcastSenderFileAppender" />
+ 	</logger>
+ 	
+ 	<appender name="3historicizesMessagesFileAppender" class="org.apache.log4j.RollingFileAppender">
+	   	<param name="File" value="log/3historicizesMessages.log"/>
+		<param name="MaxFileSize" value="10000KB"/>
+		<param name="MaxBackupIndex" value="30"/>
+	   	<layout class="org.apache.log4j.PatternLayout">
+	     	<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+	   	</layout>
+	</appender>  
+   	<logger name="it.trentuno.zerodue.anag.tasks.HistoricizesMessages">
+	 	<level value="debug"/> 
+	 	<appender-ref ref="3historicizesMessagesFileAppender" />
+ 	</logger>
+ 	
+ 	
+	<appender name="3importAnagraficaFileAppender" class="org.apache.log4j.RollingFileAppender">
+	   	<param name="File" value="log/3importAnagrafica.log"/>
+		<param name="MaxFileSize" value="10000KB"/>
+		<param name="MaxBackupIndex" value="30"/>
+	   	<layout class="org.apache.log4j.PatternLayout">
+	     	<param name="ConversionPattern" value="%d %t %-5p - %m%n"/>
+	   	</layout>
+	</appender>  
+   	<logger name="it.trentuno.zerodue.tre.ph.tasks.ImportAnagrafica">
+	 	<level value="debug"/> 
+	 	<appender-ref ref="3importAnagraficaFileAppender" />
+ 	</logger>
+	
+ 	<root>
+    	<priority value ="debug"/>
+		<appender-ref ref="consoleAppender"/>
+    	<!-- appender-ref ref="logFileAppender"/> -->
+  	</root>   
+
+</log4j:configuration>

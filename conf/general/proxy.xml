@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<config>
+	<proxy>
+		<host>10.209.4.11</host>
+		<port>8080</port>
+		<nonProxyHosts>10.218.200.3|10.209.2.236</nonProxyHosts>
+		<username></username>
+		<password></password>
+	</proxy>
+</config>

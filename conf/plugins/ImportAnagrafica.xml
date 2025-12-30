@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<config>
+	<task name="ImportAnagrafica" class="it.trentuno.zerodue.tre.ph.tasks.ImportAnagrafica" status="on">
+	
+		<database_ph>
+			<driver>org.postgresql.Driver</driver>
+			<url>jdbc:postgresql://pgsql_np.intra.azosp.vr.it:5432/pharma_home_db</url>
+			<username>pharma_home_user</username>
+			<password>udraFA6UwuQ3Wr</password>
+		</database_ph>
+		
+<!-- 		<database_ph>
+			<driver>org.postgresql.Driver</driver>
+			<url>jdbc:postgresql://pgsql_mix3.intra.azosp.vr.it:5432/pharma_home_db</url>
+			<username>pharma_home_user</username>
+			<password>fhVkiphb3C6Udx28FY0o</password>
+		</database_ph> -->
+
+		<!-- abilita trattamento segnale di shutdown -->
+		<signal>Shutdown</signal>
+		<signal>StartBoot</signal>
+		
+	
+		<timer type="Cicle">
+			<startTime>00:01</startTime>
+			<endTime>23:59</endTime>
+			<unit>seconds</unit>
+			<value>60</value>
+		</timer>
+	</task>
+</config>

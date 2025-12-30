@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<config>
+	<emailReports>
+		<smtpserver>smtp.intra.azosp.vr.it</smtpserver>
+		<from>info@3102.it</from>
+		<user></user>
+		<password></password>
+	</emailReports>
+	<mailinglist name="InternalReport">
+		<to>anag@3102.it</to>
+	</mailinglist>
+	<mailinglist name="developers">
+		<to>anag@3102.it</to>
+	</mailinglist>
+	<task name="eventProcessor" class="it.trentuno.zerodue.streamer.Processor" status="on">
+		<timer type="Cicle">
+			<startTime>00:00</startTime>
+			<endTime>23:59</endTime>
+			<unit>seconds</unit>
+			<value>20</value>
+		</timer>
+	</task>
+</config>

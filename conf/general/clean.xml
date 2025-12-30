@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<config>
+	<task name="cancellazioneXcmq" class="it.abaco.sc.DeleteFile" status="on">
+		<oldDays>4</oldDays>
+		<namePattern>*.xcmq</namePattern>
+		<path>.\message</path>
+		<timer type="Cicle">
+			<startTime>06:30</startTime>
+			<endTime>23:50</endTime>
+			<unit>hours</unit>
+			<value>2</value>
+		</timer>
+	</task>
+
+</config>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<config>
+	<xcmq name="MultiMsgCommandQueue">
+			<service>REMMAT00</service>
+			<xcmqpath>D:\xcmq_client\XCMQBGET</xcmqpath>
+			<xcmqinifile>D:\\xcmq_client\\XCMQBGET\\match_get.ini</xcmqinifile>
+			<xcmqmesspath>.\message</xcmqmesspath>
+	</xcmq>
+	<xcmq name="RetryCommandQueue">
+		<service>REMMAT00</service>
+		<xcmqpath>d:\\xcmq_client\\xcmqbput</xcmqpath>
+		<xcmqinifile>d:\\xcmq_client\\xcmqbput\\match_put.ini</xcmqinifile>
+		<xcmqmesspath>.\message</xcmqmesspath>
+	</xcmq>
+	<xcmq name="MultiMsgCommandQueueProd">
+			<service>REMMAT00</service>
+			<xcmqpath>D:\xcmq_client\XCMQBGET</xcmqpath>
+			<xcmqinifile>D:\\xcmq_client\\XCMQBGET\\match_get_prod.ini</xcmqinifile>
+			<xcmqmesspath>.\message</xcmqmesspath>
+	</xcmq>
+</config>

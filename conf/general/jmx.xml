@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<config>
+	<jmx>
+		<port>8090</port>
+		<name>3streamer</name><!--
+		<BackupServerURL>http://10.209.2.189:8090</BackupServerURL>
+	-->
+	</jmx>
+</config>

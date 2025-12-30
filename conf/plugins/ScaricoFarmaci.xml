@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<config>
+	<task name="ScaricoFarmaci" class="it.trentuno.zerodue.tre.ph.tasks.ScaricoFarmaci" status="on">
+
+		<database_integra>
+			<driver>oracle.jdbc.OracleDriver</driver>
+<!-- 			<url>jdbc:oracle:thin:@giuliettatest.intra.azosp.vr.it:1521:OLIAOUI</url> -->
+<!-- PRODUZUIONE -->
+			<url>jdbc:oracle:thin:@oliaoui-lh.intra.azosp.vr.it:1521:OLIAOUI</url>
+			<username>OLIAMM_IO</username>
+			<password>OI_MMAILO</password>
+		</database_integra>
+
+		<database_pharma_dati>
+			<driver>org.postgresql.Driver</driver>
+			<!--<url>jdbc:postgresql://localhost:5432/pharma_home_db</url>  -->
+<!-- TEST			<url>jdbc:postgresql://pgsql_np.intra.azosp.vr.it:5432/pharma_home_db</url>
+			<username>pharma_home_user</username>
+			<password>udraFA6UwuQ3Wr</password> -->
+				    <!-- PRODUZIONE -->
+			<url>jdbc:postgresql://pgsql_mix3.intra.azosp.vr.it:5432/pharma_home_db</url>
+			<username>pharma_home_user</username>
+			<password>fhVkiphb3C6Udx28FY0o</password>
+		</database_pharma_dati>
+
+		<!-- abilita trattamento segnale di shutdown -->
+		<signal>Shutdown</signal>
+		<signal>StartBoot</signal>
+
+		<timer type="Cicle">
+			<startTime>00:01</startTime>
+			<endTime>23:59</endTime>
+			<unit>seconds</unit>
+			<value>60</value>
+		</timer>
+	</task>
+</config>
+
