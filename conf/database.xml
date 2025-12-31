@@ -15,14 +15,15 @@
 	    <!-- <url>jdbc:sqlserver://INSTA2-SQLC02W3:1607;databaseName=eightlondon</url> -->
 	    
 	    <!-- TEST -->
-	    <!-- <url>jdbc:postgresql://pgsql_np.intra.azosp.vr.it:5432/pharma_home_db</url> 
+	    <!--  -->
+		<url>jdbc:postgresql://pgsql_np.intra.azosp.vr.it:5432/pharma_home_db</url>
 	    <username>pharma_home_user</username>
-		<password>udraFA6UwuQ3Wr</password>   -->
+		<password>udraFA6UwuQ3Wr</password>
 	    
-	    <!-- PRODUZIONE -->
+	    <!-- PRODUZIONE
 		<url>jdbc:postgresql://pgsql_mix3.intra.azosp.vr.it:5432/pharma_home_db</url>
 		<username>pharma_home_user</username>
-		<password>fhVkiphb3C6Udx28FY0o</password>
+		<password>fhVkiphb3C6Udx28FY0o</password> -->
 		
 		<connections>20</connections>
 		<sleeptime>30000</sleeptime>
@@ -32,12 +33,13 @@
 		<hibernate>
 			<!-- non usare 'show sql' in ambiente di produzione -->
 			<hibernate.show_sql>false</hibernate.show_sql>
-			
-			<hibernate.default_schema>dbo</hibernate.default_schema>
-			<hibernate.dialect>org.hibernate.dialect.SQLServerDialect</hibernate.dialect>
-			
-			<!-- non usare l'aggiornamento automatico dello schema in ambiente di produzione 
-			<hibernate.hbm2ddl.auto>update</hibernate.hbm2ddl.auto>-->
+
+			<hibernate.default_schema>public</hibernate.default_schema>
+			<hibernate.dialect>org.hibernate.dialect.PostgreSQLDialect</hibernate.dialect>
+			<hibernate.connection.provider_class>it.trentuno.zerodue.streamer.hibernate.DBCPConnectionProvider</hibernate.connection.provider_class>
+
+			<!-- non usare l'aggiornamento automatico dello schema in ambiente di produzione -->
+			<hibernate.hbm2ddl.auto>update</hibernate.hbm2ddl.auto>
 		</hibernate>
 		
 	</database> 

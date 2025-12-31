@@ -37,11 +37,9 @@
 
 		<database_pharma_dati>
 			<driver>org.postgresql.Driver</driver>
-			<!-- <url>jdbc:postgresql://localhost:5432/pharma_home_db</url>  -->
-			<!-- <url>jdbc:postgresql://pgsql_np.intra.azosp.vr.it:5432/pharma_home_db</url> -->
+			<url>jdbc:postgresql://pgsql_np.intra.azosp.vr.it:5432/pharma_home_db</url>
 			<username>pharma_home_user</username>
 			<password>udraFA6UwuQ3Wr</password>
-			<password>fhVkiphb3C6Udx28FY0o</password>
 		</database_pharma_dati>
 		
 		<database_TGR>
