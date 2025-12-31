@@ -49,10 +49,10 @@
 		<signal>StartBoot</signal>
 
 		<timer type="Cicle">
-			<startTime>00:01</startTime>
+			<startTime>01:00</startTime>
 			<endTime>23:59</endTime>
 			<unit>hours</unit>
-			<value>12</value>
+			<value>24</value>
 		</timer>
 	</task>
 </config>
