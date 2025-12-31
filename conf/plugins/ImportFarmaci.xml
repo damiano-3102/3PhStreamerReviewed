@@ -41,16 +41,8 @@
 			<username>pharma_home_user</username>
 			<password>udraFA6UwuQ3Wr</password>
 		</database_pharma_dati>
-		
-		<database_TGR>
-			<driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver>
-			<!-- <url>jdbc:sqlserver://SQLSRV-MIX1.iov.azospvr.it:59851;databaseName=TGR;</url> -->
-			<!-- <url>jdbc:sqlserver://SQLSRV-MIX1.iov.azospvr.it:51683;databaseName=TGR;</url> -->
-			<url>jdbc:sqlserver://SQLBUSTERMED.iov.azospvr.it:51683;databaseName=TGR;</url>
-			<username>Adam</username>
-			<password>Pomari</password>
-		</database_TGR>
 
+		<!-- database_TGR removed - connection no longer available -->
 
 		<!-- abilita trattamento segnale di shutdown -->
 		<signal>Shutdown</signal>

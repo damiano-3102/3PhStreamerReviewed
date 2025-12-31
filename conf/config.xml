@@ -6,7 +6,7 @@
 		<xml status="off">conf/general/mailinglist.xml</xml>
 		<xml status="on">conf/database.xml</xml>
 
-		<xml status="off">conf/plugins/ImportFarmaci.xml</xml>
+		<xml status="on">conf/plugins/ImportFarmaci.xml</xml>
 		<xml status="off">conf/plugins/ScaricoFarmaci.xml</xml>
 		<xml status="off">conf/plugins/ImportPrezzoFarmaci.xml</xml>
 		<xml status="off">conf/plugins/ImportAnagrafica.xml</xml>

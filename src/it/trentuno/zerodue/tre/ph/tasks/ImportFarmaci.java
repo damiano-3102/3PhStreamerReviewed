@@ -298,7 +298,7 @@ public class ImportFarmaci extends Task {
 	public void initialize() throws TaskException {
 		new it.trentuno.zerodue.tre.pharmahome.tables.auto.DatabaseAccess(loadDbProperties("database_pharma_dati"));
 		new it.trentuno.zerodue.tre.pharmahome.tables.auto.integra.DatabaseAccess(loadDbProperties("database_integra"));
-		new it.trentuno.zerodue.tre.pharmahome.tables.auto.TGR.DatabaseAccess(loadDbProperties("database_TGR"));
+		// TGR database connection removed - no longer available
 		initGiro = true;
 	}
 
