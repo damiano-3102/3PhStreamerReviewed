@@ -221,7 +221,8 @@ public class ImportFarmaci extends Task {
 		farma.setFarmaco(farmaco.getProdotto());
 		farma.setEstero(false);
 		farma.setFattore_conversione(farmaco.getQuantitaconfezione());
-		farma.setId_principio_attivo(farmaco.getIdprincipioattivo().setScale(0, RoundingMode.CEILING).intValue());
+		if (farmaco.getIdprincipioattivo() != null)
+			farma.setId_principio_attivo(farmaco.getIdprincipioattivo().setScale(0, RoundingMode.CEILING).intValue());
 		// Note: VsTemp_farmadati_datiprincipaliprodotto does not have descrizione_principio_attivo field
 		// farma.setDescrizione_principio_attivo(...);
 		farma.setClassificazione_atc(farmaco.getClassificazioneatc());
@@ -229,14 +230,16 @@ public class ImportFarmaci extends Task {
 		farma.setTipo_prodotto_descrizione(farmaco.getTipoprodottodescrizione());
 		farma.setTipologia_prodotto(farmaco.getTipologiaprodotto());
 		farma.setForma_farmaceutica(farmaco.getFormafarmaceutica());
-		farma.setId_unita_misura(new BigInteger(farmaco.getIdunitamisuraunitaapplicazione()).intValue());
+		if (farmaco.getIdunitamisuraunitaapplicazione() != null)
+			farma.setId_unita_misura(new BigInteger(farmaco.getIdunitamisuraunitaapplicazione()).intValue());
 		farma.setUnita_misura(farmaco.getUnitamisura());
 		farma.setUnita_misura_descrizione(farmaco.getDescrizioneunitamisura());
 		if (farmaco.getDataimmissionecommercio() != null)
 			farma.setData_immissione_commercio(
 					new SimpleDateFormat("yyyyMMdd").format(farmaco.getDataimmissionecommercio()));
 		farma.setId_classe(farmaco.getIdclasse());
-		farma.setClasse_descrizione(new String(farmaco.getDescrizioneclasse()));
+		if (farmaco.getDescrizioneclasse() != null)
+			farma.setClasse_descrizione(new String(farmaco.getDescrizioneclasse()));
 		if (farmaco.getDatatiporicetta() != null)
 			farma.setData_tipo_ricetta1(new SimpleDateFormat("yyyyMMdd").format(farmaco.getDatatiporicetta()));
 		farma.setId_tipo_ricetta1(farmaco.getIdtiporicetta());
@@ -246,17 +249,20 @@ public class ImportFarmaci extends Task {
 		farma.setId_tipo_ricetta2(farmaco.getIdtiporicetta2());
 		farma.setTipo_ricetta2_descrizione(farmaco.getDescrizionetiporicetta2());
 		farma.setId_regime_ssn(farmaco.getIdregimessn());
-		farma.setRegime_sanitario_descrizione(new String(farmaco.getDescrizioneregimesanitario()));
+		if (farmaco.getDescrizioneregimesanitario() != null)
+			farma.setRegime_sanitario_descrizione(new String(farmaco.getDescrizioneregimesanitario()));
 		if (farmaco.getDataprezzo1() != null)
 			farma.setData_prezzo1(new SimpleDateFormat("yyyyMMdd").format(farmaco.getDataprezzo1()));
 		farma.setId_tipo_prezzo1(farmaco.getIdtipoprezzo1());
 		farma.setPrezzo1(farmaco.getPrezzo1());
-		farma.setPrezzo1_descrizione(new String(farmaco.getDescrizioneprezzo1()));
+		if (farmaco.getDescrizioneprezzo1() != null)
+			farma.setPrezzo1_descrizione(new String(farmaco.getDescrizioneprezzo1()));
 		if (farmaco.getDataprezzo2() != null)
 			farma.setData_prezzo2(new SimpleDateFormat("yyyyMMdd").format(farmaco.getDataprezzo2()));
 		farma.setId_tipo_prezzo2(farmaco.getIdtipoprezzo2());
 		farma.setPrezzo2(farmaco.getPrezzo2());
-		farma.setPrezzo2_descrizione(new String(farmaco.getDescrizioneprezzo2()));
+		if (farmaco.getDescrizioneprezzo2() != null)
+			farma.setPrezzo2_descrizione(new String(farmaco.getDescrizioneprezzo2()));
 		if (farmaco.getDatanoteprescrizione1() != null)
 			farma.setData_note_prescrizione1(
 					new SimpleDateFormat("yyyyMMdd").format(farmaco.getDatanoteprescrizione1()));
